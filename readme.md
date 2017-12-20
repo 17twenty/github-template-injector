@@ -1,7 +1,7 @@
 # Github Template Injector
 
 Simple script that relies on having [personal access tokens](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
-for your source and target.
+for your account.
 
 ## Getting Started
 
@@ -18,6 +18,7 @@ $ bash gh-templater.sh
 
 ## Issues
 
-Currently only really works against Github Enterprise due to the fact Github.com exposes different URIs for API and I'm lazy.
+- Currently only really works against Github Enterprise due to the fact Github.com exposes different URIs for API and I'm lazy.
+- Only deals with the first 100 pages... You'd need to get it to do `&page=2` or filter out the 'next' link in the JSON but see point 1.
 
 PRs welcome.

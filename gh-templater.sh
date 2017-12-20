@@ -28,7 +28,7 @@ sleep 5
 # TODO: If it's regular github, we use /orgs/ if it's enterprise it's /api/v3/orgs
 
 # Get a list of all the remote repos (using the AUTH_TOKEN for Github)
-ALL_REPOS=$(curl -s -H "Authorization: token $GITHUB_AUTH_TOKEN" https://$GITHUB_URI/api/v3/orgs/$GITHUB_ORG/repos)
+ALL_REPOS=$(curl -s -H "Authorization: token $GITHUB_AUTH_TOKEN" https://$GITHUB_URI/api/v3/orgs/$GITHUB_ORG/repos?per_page=100)
 REPO_NAMES_STRING=$(echo $ALL_REPOS | jq '.[] | .name' | sed 's/"//g')
 REPO_HTTPS_STRING=$(echo $ALL_REPOS | jq '.[] | .clone_url'| sed 's/"//g')
 
