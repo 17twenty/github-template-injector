@@ -2,9 +2,6 @@
 
 Hold ~~/WiP/Ready~~
 
-## Description
-
-
 ## Overview
 
 
